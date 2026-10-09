@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: #0f172a;
+}
+
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-y {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-2 rounded-full border border-azure-200 bg-soft px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-azure-700;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-azure-700 hover:shadow-glow active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-line bg-white px-6 py-3.5 text-sm font-semibold text-ink transition-all duration-300 hover:border-azure-400 hover:bg-soft active:scale-[0.98];
+  }
+
+  .btn-azure {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-azure-500 px-6 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-azure-600 active:scale-[0.98];
+  }
+
+  .card-surface {
+    @apply rounded-xl3 border border-line bg-white shadow-soft transition-all duration-300;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 text-sm font-semibold text-azure-700 transition-all duration-300 group-hover:gap-2.5 group-hover:text-azure-600;
+  }
+}
